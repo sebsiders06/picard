@@ -620,6 +620,13 @@ button {
   animation: sn-hero-zoom 18s ease-in-out infinite alternate;
 }
 
+@media (max-width: 959px) {
+  .sn-hero-media img {
+    object-position: center 38%;
+    animation-duration: 22s;
+  }
+}
+
 @keyframes sn-hero-zoom {
   to {
     transform: scale(1.12);
