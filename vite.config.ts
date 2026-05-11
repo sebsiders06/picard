@@ -43,9 +43,15 @@ function resolveBase(): string {
   return "/picard/";
 }
 
-const base = resolveBase();
+/**
+ * En dev (`vite` / `npm run dev`) : `base: "/"` → http://localhost:5173/ suffit.
+ * En build + preview : même base que GitHub Pages pour que les assets se chargent.
+ */
+export default defineConfig(({ command, mode }) => {
+  const base = command === "serve" && mode === "development" ? "/" : resolveBase();
 
-export default defineConfig({
-  plugins: [react()],
-  base,
+  return {
+    plugins: [react()],
+    base,
+  };
 });
