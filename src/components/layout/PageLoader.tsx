@@ -1,19 +1,38 @@
 import { useEffect, useState } from "react";
 
+/**
+ * Overlay de chargement : ne doit jamais bloquer l’app (évite écran figé si `load` ne part pas).
+ */
 export function PageLoader() {
   const [exit, setExit] = useState(false);
   const [gone, setGone] = useState(false);
 
   useEffect(() => {
-    const min = 520;
+    const min = 400;
     const start = performance.now();
-    const finish = () => {
+    let finished = false;
+
+    const scheduleExit = () => {
+      if (finished) return;
+      finished = true;
       const elapsed = performance.now() - start;
       window.setTimeout(() => setExit(true), Math.max(0, min - elapsed));
     };
-    if (document.readyState === "complete") finish();
-    else window.addEventListener("load", finish, { once: true });
-    return () => window.removeEventListener("load", finish);
+
+    if (document.readyState === "complete") {
+      scheduleExit();
+    } else {
+      document.addEventListener("DOMContentLoaded", scheduleExit, { once: true });
+      window.addEventListener("load", scheduleExit, { once: true });
+    }
+
+    const safety = window.setTimeout(scheduleExit, 4500);
+
+    return () => {
+      window.clearTimeout(safety);
+      document.removeEventListener("DOMContentLoaded", scheduleExit);
+      window.removeEventListener("load", scheduleExit);
+    };
   }, []);
 
   useEffect(() => {

@@ -5,10 +5,10 @@
   "type": "module",
   "homepage": "https://sebsiders06.github.io/picard/",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
     "build": "tsc -b && vite build",
     "postbuild": "node ./scripts/copy-404.mjs",
-    "preview": "vite preview",
+    "preview": "vite preview --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --dotfiles"
   },

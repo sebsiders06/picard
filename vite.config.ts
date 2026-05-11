@@ -44,11 +44,20 @@ function resolveBase(): string {
 }
 
 /**
- * En dev (`vite` / `npm run dev`) : `base: "/"` → http://localhost:5173/ suffit.
- * En build + preview : même base que GitHub Pages pour que les assets se chargent.
+ * Base publique :
+ * - `vite build` → sous-chemin GitHub Pages (resolveBase).
+ * - `vite preview` → commande `serve` + mode `production` → même base que le build.
+ * - `vite` / `npm run dev` → mode `development` → `"/"` pour http://localhost:5173/ sans page blanche.
+ *
+ * (Si `serve` tournait en mode `production` hors preview, on utiliserait encore resolveBase — rare.)
  */
 export default defineConfig(({ command, mode }) => {
-  const base = command === "serve" && mode === "development" ? "/" : resolveBase();
+  const base =
+    command === "build"
+      ? resolveBase()
+      : command === "serve" && mode === "production"
+        ? resolveBase()
+        : "/";
 
   return {
     plugins: [react()],
