@@ -411,8 +411,8 @@ button {
   display: flex;
   flex-direction: column;
   padding: 0;
-  background: #0c0f0d;
-  border-bottom: 1px solid rgba(201, 169, 98, 0.28);
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
   opacity: 0;
   visibility: hidden;
@@ -446,7 +446,7 @@ button {
 .sn-mobile-nav-title {
   margin: 0 0 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 500;
@@ -467,8 +467,8 @@ button {
   gap: 0.75rem;
   padding: 0.72rem 0.85rem;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  background: #151b18;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d0d0d;
   color: var(--text);
   font-size: 0.9rem;
   font-weight: 500;
@@ -492,8 +492,8 @@ button {
 
 .sn-mobile-link:hover,
 .sn-mobile-link:focus-visible {
-  border-color: rgba(201, 169, 98, 0.45);
-  background: #1a221e;
+  border-color: rgba(201, 169, 98, 0.5);
+  background: #1a1a1a;
   color: var(--gold);
 }
 
@@ -502,7 +502,7 @@ button {
 }
 
 .sn-mobile-link:active {
-  background: #1f2823;
+  background: #141414;
 }
 
 .sn-mobile-cta {
@@ -511,7 +511,7 @@ button {
   gap: 0.5rem;
   margin-top: 0.75rem;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .sn-btn-block {
