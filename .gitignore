@@ -1,4 +1,4 @@
-node_modules
-dist
-*.local
+dist/
+node_modules/
 .DS_Store
+*.log
