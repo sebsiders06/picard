@@ -46,22 +46,32 @@
           <a class="sn-btn sn-btn-outline" href="#tarifs">Nos formules</a>
           <a class="sn-btn sn-btn-solid" href="#contact">Devis gratuit</a>
         </div>
-        <button type="button" class="sn-nav-toggle" id="sn-nav-toggle" aria-expanded="false" aria-controls="sn-nav-panel" aria-label="Ouvrir le menu">☰</button>
+        <button type="button" class="sn-nav-toggle" id="sn-nav-toggle" aria-expanded="false" aria-controls="sn-nav-panel" aria-label="Ouvrir le menu">
+          <span class="sn-nav-toggle-box" aria-hidden="true">
+            <span class="sn-nav-toggle-bar"></span>
+            <span class="sn-nav-toggle-bar"></span>
+            <span class="sn-nav-toggle-bar"></span>
+          </span>
+        </button>
       </div>
-      <div id="sn-nav-panel" class="sn-mobile-panel" aria-hidden="true">
-        <div class="sn-mobile-grid">
-          <a href="#a-propos">À propos</a>
-          <a href="#prestations">Prestations</a>
-          <a href="#savoir-faire">Savoir-faire</a>
-          <a href="#tarifs">Tarifs</a>
-          <a href="#galerie">Galerie</a>
-          <a href="#processus">Processus</a>
-          <a href="#contact">Contact</a>
+      <div id="sn-nav-backdrop" class="sn-nav-backdrop" aria-hidden="true"></div>
+      <div id="sn-nav-panel" class="sn-mobile-panel" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sn-mobile-menu-title">
+        <nav class="sn-mobile-nav" aria-label="Navigation sur mobile">
+          <p id="sn-mobile-menu-title" class="sn-mobile-nav-title">Menu</p>
+          <div class="sn-mobile-grid">
+            <a class="sn-mobile-link" href="#a-propos">À propos</a>
+            <a class="sn-mobile-link" href="#prestations">Prestations</a>
+            <a class="sn-mobile-link" href="#savoir-faire">Savoir-faire</a>
+            <a class="sn-mobile-link" href="#tarifs">Tarifs</a>
+            <a class="sn-mobile-link" href="#galerie">Galerie</a>
+            <a class="sn-mobile-link" href="#processus">Processus</a>
+            <a class="sn-mobile-link" href="#contact">Contact</a>
+          </div>
           <div class="sn-mobile-cta">
             <a class="sn-btn sn-btn-solid sn-btn-lg sn-btn-block" href="#contact">Demander un devis</a>
             <a class="sn-btn sn-btn-outline sn-btn-lg sn-btn-block" href="#prestations">Voir nos prestations</a>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
