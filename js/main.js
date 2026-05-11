@@ -85,28 +85,6 @@
     });
   }
 
-  /* Testimonials carousel */
-  var track = document.getElementById("sn-carousel-track");
-  var view = document.getElementById("sn-carousel-view");
-  var prevBtn = document.getElementById("sn-carousel-prev");
-  var nextBtn = document.getElementById("sn-carousel-next");
-  if (track && view) {
-    var slides = track.querySelectorAll(".sn-slide");
-    var n = slides.length;
-    view.style.setProperty("--sn-slides", String(n));
-    var index = 0;
-    function go(delta) {
-      index = (index + delta + n) % n;
-      track.style.transform = "translateX(-" + (index * 100) / n + "%)";
-    }
-    if (prevBtn) prevBtn.addEventListener("click", function () { go(-1); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { go(1); });
-    window.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowLeft") go(-1);
-      if (e.key === "ArrowRight") go(1);
-    });
-  }
-
   /* Scroll top */
   var fabTop = document.getElementById("sn-scroll-top");
   if (fabTop) {
