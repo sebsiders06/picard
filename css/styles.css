@@ -662,6 +662,8 @@ button {
   margin-inline: auto;
   text-align: center;
   transform: translateY(-2cm);
+  perspective: 960px;
+  perspective-origin: 50% 45%;
 }
 
 @media (max-width: 959px) {
@@ -692,7 +694,12 @@ button {
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
   animation: sn-fade-up 0.9s var(--ease) both;
-  transition: color 0.25s var(--ease);
+  transform-origin: center 55%;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.45s var(--ease),
+    text-shadow 0.45s var(--ease),
+    color 0.25s var(--ease);
 }
 
 .sn-hero-title:hover {
@@ -701,6 +708,12 @@ button {
   background-image: linear-gradient(135deg, #e3cf8a, var(--gold) 55%, #a3843f);
   -webkit-background-clip: text;
   background-clip: text;
+  transform: translateY(0) scale(1.075) rotateX(9deg) rotateY(-3deg);
+  text-shadow:
+    0 0.04em 0 rgba(201, 169, 98, 0.45),
+    0 0.08em 0 rgba(163, 132, 63, 0.55),
+    0 0.12em 0 rgba(122, 98, 48, 0.4),
+    0 0.35em 0.45em rgba(0, 0, 0, 0.45);
 }
 
 .sn-hero .lead {
