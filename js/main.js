@@ -135,7 +135,7 @@
         message;
       var subject = "Devis Signature Nomade";
       var url =
-        "mailto:contact@signature-nomade.fr?subject=" +
+        "mailto:picardruan@gmail.com?subject=" +
         encodeURIComponent(subject) +
         "&body=" +
         encodeURIComponent(body);
