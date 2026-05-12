@@ -621,6 +621,21 @@ button {
 }
 
 @media (max-width: 959px) {
+  .sn-hero {
+    align-items: start;
+    padding: calc(4.35rem + env(safe-area-inset-top, 0px)) 1rem clamp(2.5rem, 8vw, 4rem);
+    min-height: min(90vh, 840px);
+  }
+
+  .sn-hero-inner {
+    transform: none;
+    width: min(920px, 100%);
+  }
+
+  .sn-badge {
+    margin: 0 auto 1rem;
+  }
+
   .sn-hero-media img {
     object-position: center 38%;
     animation-duration: 22s;
