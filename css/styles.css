@@ -692,6 +692,12 @@ button {
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
   animation: sn-fade-up 0.9s var(--ease) both;
+  transition: color 0.25s var(--ease);
+}
+
+/* Même couleur que le texte du bouton « solid » (au survol du bouton Devis) */
+.sn-hero-inner:has(.sn-btn-solid:hover) .sn-hero-title {
+  color: #14100a;
 }
 
 .sn-hero .lead {
