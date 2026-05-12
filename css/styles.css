@@ -623,7 +623,7 @@ button {
 @media (max-width: 959px) {
   .sn-hero {
     align-items: start;
-    padding: 2cm 1rem clamp(2.5rem, 8vw, 4rem);
+    padding: calc(2cm + 1.75rem) 1rem clamp(2.5rem, 8vw, 4rem);
     min-height: min(90vh, 840px);
   }
 
