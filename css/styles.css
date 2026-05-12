@@ -696,7 +696,11 @@ button {
 }
 
 .sn-hero-title:hover {
-  color: #14100a;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #e3cf8a, var(--gold) 55%, #a3843f);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .sn-hero .lead {
