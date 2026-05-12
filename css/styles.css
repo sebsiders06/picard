@@ -651,6 +651,7 @@ button {
   width: min(920px, calc(100% - 2.5rem));
   margin-inline: auto;
   text-align: center;
+  transform: translateY(-2cm);
 }
 
 .sn-badge {
