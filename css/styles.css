@@ -627,11 +627,6 @@ button {
     min-height: min(90vh, 840px);
   }
 
-  .sn-hero-inner {
-    transform: none;
-    width: min(920px, 100%);
-  }
-
   .sn-badge {
     margin: 0 auto 1rem;
   }
@@ -667,6 +662,13 @@ button {
   margin-inline: auto;
   text-align: center;
   transform: translateY(-2cm);
+}
+
+@media (max-width: 959px) {
+  .sn-hero-inner {
+    transform: none;
+    width: min(920px, 100%);
+  }
 }
 
 .sn-badge {
